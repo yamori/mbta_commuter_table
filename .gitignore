@@ -1,0 +1,10 @@
+.vscode/*
+node_modules/
+.npm
+
+# Project specific
+notes.txt
+temp_data/*
+
+# API key, etc.
+data_pipe/.env
