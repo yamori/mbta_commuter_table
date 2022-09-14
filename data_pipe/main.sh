@@ -17,4 +17,14 @@ node stopsWithinGPSRadius.js
 node readStopData.js
 # output
 #  stopNamesKeyedByID.json
-#  
+#  stopIDs.csv
+
+export STOP_IDS_CSV=$(cat $TMP_DATA_DIR/stopIDs.csv)
+
+# Process: query for routes which service stopIDs
+node queryForRoutes.js
+# ouput
+#  routes.json
+#  routeIDs.csv
+
+export ROUTE_IDS_CSV=$(cat $TMP_DATA_DIR/routeIDs.csv)

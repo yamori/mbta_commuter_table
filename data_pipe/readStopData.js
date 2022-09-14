@@ -18,7 +18,7 @@ console.log(stopsByIDObject);
 fs.writeFileSync(`${tempDataDir}/stopNamesKeyedByID.json`, JSON.stringify(stopsByIDObject, null, 2) , 'utf-8');
 
 var stopIDsCSV = returnCSVStops(stopsByIDObject);
-console.log("\n","# Stop IDs CSV");
+console.log("\n","## Stop IDs CSV");
 console.log( stopIDsCSV );
 fs.writeFileSync(`${tempDataDir}/stopIDs.csv`, stopIDsCSV , 'utf-8');
 
