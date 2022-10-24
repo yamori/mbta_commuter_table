@@ -4,6 +4,10 @@ require('dotenv').config();
 var request = require('request');
 var fs = require('fs'); 
 
+if (!("TMP_DATA_DIR" in process.env)) {
+   console.log('Environment variable TMP_DATA_DIR is required but was not found');
+   process.exit(1);
+}
 var tempDataDir = process.env.TMP_DATA_DIR;
 var routesJSONFilename = "routes.json";
 

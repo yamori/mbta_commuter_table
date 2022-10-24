@@ -28,3 +28,8 @@ node queryForRoutes.js
 #  routeIDs.csv
 
 export ROUTE_IDS_CSV=$(cat $TMP_DATA_DIR/routeIDs.csv)
+
+# Processing: query for Schedules from routeIDs
+node queryForSchdules.js
+# output
+#  validRides_morning.json
