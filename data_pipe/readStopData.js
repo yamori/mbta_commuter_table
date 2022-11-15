@@ -10,7 +10,11 @@ let stopsDataArray = JSON.parse(rawdata).data;
 
 var stopsByIDObject = {};
 for (var i = 0; i < stopsDataArray.length; i++) {
-   stopsByIDObject[stopsDataArray[i].id] = {'name': stopsDataArray[i].attributes.name};
+   stopsByIDObject[stopsDataArray[i].id] = {
+      'name': stopsDataArray[i].attributes.name,
+      'latitude': stopsDataArray[i].attributes.latitude,
+      'longitude': stopsDataArray[i].attributes.longitude
+   };
 }
 
 console.log("\n","# Stop obj keyed by ID");
